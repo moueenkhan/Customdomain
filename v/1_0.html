@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="shortcut icon" href='/favicon'>
+            <title> APIMATIC Calculator - 1.0</title>
+            <link href="/css/api-docs/docs.css" rel="stylesheet" />
+        <style>
+        .ap-dropdown-menu > .item.active > a,
+        .ap-dropdown-menu > .item.active > a:hover,
+        .ap-dropdown-menu .selected-version,
+        .branding-container .navigation .center .version-select select {
+            color: #0da6e1!important;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var versionSelect = document.getElementById("version-select");
+
+            for(var i, j = 0; i = versionSelect.options[j]; j++) {
+               if(i.value == '62272bd39440abb5e0792d03') {
+                versionSelect.selectedIndex = j;
+                break;
+                }
+            }
+
+            versionSelect.addEventListener('change', function () {
+                var selectedVersion = versionSelect.options[versionSelect.selectedIndex].text;
+                var selectedApiId = versionSelect.options[versionSelect.selectedIndex].value;
+                var host = window.location.host;
+                var protocol = window.location.protocol;
+                var url = '';
+                    
+                    url = protocol + "//" + host + "/v/" + selectedVersion.replaceAll('.', '_');
+                    
+                window.location.href = url;
+                });
+        }
+    </script>
+
+    
+    
+</head>
+<body>
+    <div>
+        <div class="portal-header">
+            <div class="branding-container">
+                <div class="logo">
+                        <a href=""
+                           target="_blank">
+                            <img />
+                        </a>
+                                            <p> APIMATIC Calculator</p>
+                </div>
+                <div class="navigation">
+                    <div class="version-select">
+                        <label>Version</label>
+                        <select id="version-select" name="version"><option selected="selected" value="62272bd39440abb5e0792d03">1.0</option>
+</select>
+                        
+                    </div>
+
+                        <div class="home-button">
+                            <a href="/" class="circle-base"></a>
+                        </div>
+
+                    <div class="ap-dropdown-wrapper" id="ap-dropdown-wrapper">
+                        <label for="ap-dropdown-1" class="toggle-dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4" height="18"
+                                 viewBox="0 0 4 18">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect width="4" height="18" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g id="Component_1083_2" data-name="Component 1083 – 2" clip-path="url(#clip-path)">
+                                    <circle id="Ellipse_5" data-name="Ellipse 5" cx="2" cy="2" r="2" fill="#111423" />
+                                    <circle id="Ellipse_6" data-name="Ellipse 6" cx="2" cy="2" r="2" transform="translate(0 7)" fill="#111423" />
+                                    <circle id="Ellipse_7" data-name="Ellipse 7" cx="2" cy="2" r="2" transform="translate(0 14)" fill="#111423" />
+                                </g>
+                            </svg>
+                        </label>
+                        <input type="checkbox" id="ap-dropdown-1" />
+                        <ul class="ap-dropdown-menu" id="ap-dropdown-menu">
+                            <li class="item"><a href="/">Home</a></li>
+                            <li class="item">
+                                <label for="ap-dropdown-3" class="toggle-dropdown toggle-dropdown-sub-menu">
+                                    <span class="version-lable">Version</span>
+                                            <span class="selected-version">1.0 <img src="/imgs/shared/chevron-down-light-gray.svg" /></span>
+                                </label>
+                                <input type="checkbox" id="ap-dropdown-3" />
+                                <ul class="ap-dropdown-menu ap-dropdown-sub-menu">
+                                        <li class="item active">
+                                            <a href=/v/1_0>1.0</a>
+                                        </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hosted-api-docs">
+            <script type="text/javascript">
+                var script = document.createElement("script");
+                script.src="https://confident-lovelace-3ad89d.netlify.app/static/js/portal.v7.js";
+                script.onload = function() {
+                    APIMaticDevPortal.show(
+                        {
+  "container": "apimatic-widget",
+  "portalStyle": "default",
+  "codegenApiRoutes": {
+    "docsgen": "/api/api-entities/AO_QbhJxwR1r9krfLA5h6q0-UUjGxPWd-WgMm-AT5t-Z6s-vpNkTI0ObQ6ksNi1c/portal-artifacts/docs/generated-file?template={template}",
+    "codegen": "/api/api-entities/AO_QbhJxwR1r9krfLA5h6q0-UUjGxPWd-WgMm-AT5t-Z6s-vpNkTI0ObQ6ksNi1c/portal-artifacts/sdks/generated-file?template={template}",
+    "transform": "/api/api-entities/AO_QbhJxwR1r9krfLA5h6q0-UUjGxPWd-WgMm-AT5t-Z6s-vpNkTI0ObQ6ksNi1c/portal-artifacts/specs/generated-file?format={format}",
+    "apiProxy": "https://proxy.apimatic.io/api/proxy"
+  },
+  "apiKey": "PkUYNyvjYA7DfFBwoKTjTIzU3v4spyr1p0yqrEH3N5-nS6ZjLJ9jIChPmPZcSlYzOrUBYlz7DnowXxIFkxBZyw**",
+  "baseUrl": "",
+  "enableExport": true,
+  "renameHttpToRest": false,
+  "enableConsoleCalls": true,
+  "useProxyForConsoleCalls": true,
+  "initialPlatform": "http_curl_v1",
+  "languageSettings": {
+    "http_curl_v1": {
+      "disableSdkDownload": true
+    },
+    "cs_net_standard_lib": {
+      "disableSdkDownload": false,
+      "sdkDownloadLink": ""
+    },
+    "java_eclipse_jre_lib": {
+      "disableSdkDownload": false,
+      "sdkDownloadLink": ""
+    },
+    "php_generic_lib_v2": {
+      "disableSdkDownload": false,
+      "sdkDownloadLink": ""
+    },
+    "python_generic_lib": {
+      "disableSdkDownload": false,
+      "sdkDownloadLink": ""
+    },
+    "ruby_generic_lib": {
+      "disableSdkDownload": false,
+      "sdkDownloadLink": ""
+    },
+    "ts_generic_lib": {
+      "disableSdkDownload": false,
+      "sdkDownloadLink": ""
+    }
+  },
+  "allowedExportFormats": [
+    "postman10",
+    "postman20",
+    "openapi31json",
+    "openapi31yaml",
+    "openapi3json",
+    "openapi3yaml",
+    "swagger20",
+    "swaggeryaml",
+    "swagger10",
+    "raml",
+    "raml10",
+    "apiblueprint",
+    "wadl2009",
+    "apimatic",
+    "wsdl",
+    "insomnia",
+    "insomniayaml"
+  ],
+  "themeOverrides": {
+    "themeType": "cool",
+    "palette": {
+      "primaryColor": "#18b6f2",
+      "linkColor": "#00C7D4"
+    },
+    "fontSource": [],
+    "cssStyles": {
+      "headings": {
+        "fontFamily": "'Rubik', sans-serif",
+        "h1": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "27px",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "lineHeight": "1.3"
+        },
+        "h2": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "lineHeight": "1.3"
+        },
+        "h3": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "21.36px",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "lineHeight": "1.3"
+        },
+        "h4": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "19px",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "lineHeight": "1.3"
+        },
+        "h5": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "16.68px",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "lineHeight": "1.3"
+        },
+        "h6": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "15px",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "lineHeight": "1.3"
+        }
+      },
+      "body": {
+        "fontFamily": "'Rubik', sans-serif",
+        "text1": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "15px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "lineHeight": "1.75"
+        },
+        "text2": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "13.33px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "lineHeight": "1.75"
+        },
+        "text3": {
+          "fontFamily": "'Rubik', sans-serif",
+          "fontSize": "11.85px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "lineHeight": "1.75"
+        }
+      },
+      "code": {
+        "fontFamily": "'SFMono-400', Consolas, 'Liberation Mono', Menlo, Courier",
+        "blockCode": {
+          "fontFamily": "'SFMono-400', Consolas, 'Liberation Mono', Menlo, Courier",
+          "fontSize": "15px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "lineHeight": "1.75"
+        },
+        "inlineCode": {
+          "fontFamily": "'SFMono-400', Consolas, 'Liberation Mono', Menlo, Courier",
+          "fontSize": "15px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "lineHeight": "1.75"
+        }
+      }
+    }
+  }
+}
+                    );
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+                </script>
+<div id="apimatic-widget" style="height: 100%; width: 100%;">
+</div>
+
+        </div>
+
+    </div>
+
+    <script>
+        (function () {
+            function handleOutsideClick(e) {
+                if (!document.getElementById('ap-dropdown-wrapper').contains(e.target)) {
+                    document.getElementById('ap-dropdown-1').checked = false;
+                }
+            }
+            window.addEventListener('click', (e) => handleOutsideClick(e));
+            window.addEventListener('touchstart', (e) => handleOutsideClick(e));
+        })();
+
+    </script>
+
+    
+    
+</body>
+</html>
