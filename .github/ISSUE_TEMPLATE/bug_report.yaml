@@ -8,32 +8,49 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Details about the issue
   - type: input
-    id: contact
+    id: bug-description
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Bug Description
+      description: "Describe the bug"
+      placeholder: "Description about the Bug"
     validations:
-      required: false
+      required: true
   - type: textarea
-    id: what-happened
+    id: step-to-reproduce
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Steps to Reproduce
+      description: Brief description about how to reproduce the issue
+      placeholder: Visit to ....
+                   Click on .... etc
+    validations:
+      required: true
+  - type: input
+    id: Expected_behaviour
+    attributes:
+      label: Expected Result
+      description: "Expected behavior"
+      placeholder: "Expected behavior"
+    validations:
+      required: true
+  - type: input
+    id: actualresult
+    attributes:
+      label: Actual Result
+      description: "Actual behavior"
+      placeholder: "Actual behavior"
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: urgency
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: How urgently is the fix required
+      description: Please choose how urgently is this fix required?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Very Urgent (Need fix in single day)
+        - Urgent (Need fix within a week or two)
+        - Not urgent (Fix within a month or more)
     validations:
       required: true
   - type: dropdown
@@ -46,16 +63,25 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
-  - type: textarea
-    id: logs
+  - type: dropdown
+    id: Priority
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: What's the priority of this issue'?
+      multiple: true
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - Critical
+        - High
+        - Medium
+        - Low
+  - type: checkboxes
+    id: reported_by
+    attributes:
+      label: Reported By
+      description: Who Reported this Bug
+      options:
+        - label: Customer
+        - label: Sales
+        - label: Customer Support/Success
+        - label: Internal Stakeholder
+        - label: Internal - DX Team/QA
           required: true
