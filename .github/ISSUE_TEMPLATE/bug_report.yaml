@@ -1,14 +1,13 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 assignees:
   - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Details about the issue
+        Before opening a new issue, please search for the behaviour in the existing issues.
   - type: input
     id: bug-description
     attributes:
@@ -24,6 +23,13 @@ body:
       description: Brief description about how to reproduce the issue
       placeholder: Visit to ....
                    Click on .... etc
+    validations:
+      required: true
+  - type: textarea
+    id: attachement-url
+    attributes:
+      label: Attachment or URL
+      description: Please attach a screenshoot here or paste a URL
     validations:
       required: true
   - type: input
@@ -84,4 +90,5 @@ body:
         - label: Customer Support/Success
         - label: Internal Stakeholder
         - label: Internal - DX Team/QA
-          required: true
+
+    
