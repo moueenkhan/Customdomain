@@ -31,7 +31,7 @@ body:
       description: Please attach a screenshoot here or paste a URL
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: Expected_behaviour
     attributes:
       label: Expected Result
@@ -39,7 +39,7 @@ body:
       placeholder: "Expected behavior"
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: actualresult
     attributes:
       label: Actual Result
@@ -90,4 +90,9 @@ body:
         - label: Internal Stakeholder
         - label: Internal - DX Team/QA
 
-    
+  - type: textarea
+    id: customername
+    attributes:
+      label: Affected Customer (Customer Name)
+      description: Who is affecting this Bug
+      placeholder: "GreenByte"
